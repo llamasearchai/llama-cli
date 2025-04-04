@@ -24,7 +24,7 @@ pip install llama-cli
 ### From source
 
 ```bash
-git clone https://github.com/llamasearch/llama-cli.git
+git clone https://llamasearch.ai
 cd llama-cli
 pip install -e .
 ```
