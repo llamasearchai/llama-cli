@@ -5,14 +5,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="llama-cli",
+    name="llama-cli-llamasearch",
     version="0.1.0",
-    author="LlamaSearch.ai",
-    author_email="info@llamasearch.ai",
+    author="LlamaSearch AI",
+    author_email="nikjois@llamasearch.ai",
     description="Command-line interface for LlamaSearch.ai tools",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/llamasearch/llama-cli",
+    url="https://llamasearch.ai",
     project_urls={
         "Bug Tracker": "https://github.com/llamasearch/llama-cli/issues",
         "Documentation": "https://docs.llamasearch.ai/llama-cli",
