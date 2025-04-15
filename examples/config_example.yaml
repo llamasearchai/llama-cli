@@ -1,0 +1,58 @@
+# Llama CLI Configuration Example
+
+# Global configuration
+default_profile: prod
+output_format: json
+verbose: false
+
+# Profiles
+profiles:
+  dev:
+    api_url: https://dev.api.llamasearch.ai
+    api_key: dev_api_key_placeholder  # Don't store actual keys in config files
+  staging:
+    api_url: https://staging.api.llamasearch.ai
+    api_key: staging_api_key_placeholder
+  prod:
+    api_url: https://api.llamasearch.ai
+    api_key: prod_api_key_placeholder
+
+# Tool-specific configurations
+search:
+  default_index: main
+  max_results: 50
+  vector_models:
+    - text-embedding-ada-002
+    - llamasearch-embedding-1
+
+db:
+  connection_string: "sqlite:///data.db"
+  timeout: 30
+  max_connections: 5
+
+kv:
+  default_store: local
+  stores:
+    local:
+      type: file
+      path: ~/.config/llama/kvstore
+    redis:
+      type: redis
+      host: localhost
+      port: 6379
+      db: 0
+
+api:
+  timeout: 30
+  retry_count: 3
+  retry_delay: 1
+  user_agent: "LlamaCLI/1.0"
+
+pdf:
+  default_converter: pdftotext
+  image_extraction: true
+  max_file_size: 50000000  # 50MB
+
+plugins:
+  enabled: true
+  auto_update: false 
